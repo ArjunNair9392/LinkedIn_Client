@@ -40,7 +40,7 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	 $result = mysqli_query($connection, $query);
 
 	if (!$result) {
-		die("FAILED 45");
+		die("FAILED at inserting Name");
 	}
 
 	$query = "SELECT * FROM user ";
@@ -48,7 +48,7 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	 $result = mysqli_query($connection, $query);
 
 	if (!$result) {
-		die("FAILED 64");
+		die("FAILED at selecting table");
 	}
 
 	$total = $info['positions']['_total'];
@@ -62,7 +62,7 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 		$result = mysqli_query($connection, $query);
 
 		if (!$result) {
-			die("FAILED 78");
+			die("FAILED at inserting company details");
 		}
 	}
 	
@@ -77,7 +77,7 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 		$result = mysqli_query($connection, $query);
 
 		if (!$result) {
-			die("FAILED 93");
+			die("FAILED at inserting skills");
 		}
 	}
 
@@ -94,7 +94,7 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 		$result = mysqli_query($connection, $query);
 
 		if (!$result) {
-			die("FAILED 110");
+			die("FAILED at inserting education details");
 		}
 	}
 
@@ -109,7 +109,7 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 		$result = mysqli_query($connection, $query);
 
 		if (!$result) {
-			die("FAILED 125");
+			die("FAILED at inserting course details");
 		}
 	}
 
@@ -120,7 +120,7 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	 $result = mysqli_query($connection, $query);
 
 	if (!$result) {
-		die("FAILED 136");
+		die("FAILED at inserting picture");
 	}
 	
 	$query = "SELECT * FROM user ";
@@ -128,7 +128,7 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	 $result = mysqli_query($connection, $query);
 
 	if (!$result) {
-		die("FAILED 144");
+		die("FAILED a selecting table");
 	}
 
 	
@@ -137,13 +137,13 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	$dupresult = mysqli_query($connection, $query);
 
 	if (!$dupresult) {
-		die("FAILED 153");
+		die("FAILED");
 	}
 	$query1	= "INSERT duplicate SELECT * FROM user";
 	$dupresult = mysqli_query($connection, $query1);
 
 	if (!$dupresult) {
-		die("FAILED 159");
+		die("FAILED ");
 	}
 	 	
 		
@@ -152,7 +152,7 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	$dupresult = mysqli_query($connection, $query);
 
 	if (!$dupresult) {
-		die("FAILED 168");
+		die("FAILED ");
 	}
 ?>
 
@@ -254,9 +254,6 @@ $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 				?>
 
 		<div class="row" style="background-color:#4875B4; color:black; padding:20px;">
-			
-
-
 			
 		<?php
 
